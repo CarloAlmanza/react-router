@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function ProductCard({ product }) {
     return (
         <div className="col-md-4 mb-4">
@@ -6,7 +8,10 @@ function ProductCard({ product }) {
                     src={product.image}
                     className="card-img-top p-3"
                     alt={product.title}
-                    style={{ height: '250px', objectFit: 'contain' }}
+                    style={{
+                        height: '250px',
+                        objectFit: 'contain',
+                    }}
                 />
 
                 <div className="card-body d-flex flex-column">
@@ -22,9 +27,18 @@ function ProductCard({ product }) {
                         € {product.price}
                     </p>
 
-                    <button className="btn btn-primary mt-auto">
-                        Acquista
-                    </button>
+                    <div className="mt-auto d-flex gap-2">
+                        <Link
+                            to={`/prodotti/${product.id}`}
+                            className="btn btn-outline-dark"
+                        >
+                            Dettagli
+                        </Link>
+
+                        <button className="btn btn-primary">
+                            Acquista
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

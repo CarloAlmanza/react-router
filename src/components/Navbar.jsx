@@ -9,28 +9,55 @@ function AppNavbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                <NavLink className="navbar-brand" to="/">
+                <NavLink
+                    className="navbar-brand"
+                    to="/"
+                >
                     FakeStore
                 </NavLink>
 
-                <div className="navbar-nav">
-                    <NavLink to="/" className={getNavClass}>
-                        Home
-                    </NavLink>
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
-                    <NavLink
-                        to="/chi-siamo"
-                        className={getNavClass}
-                    >
-                        Chi Siamo
-                    </NavLink>
+                <div
+                    className="collapse navbar-collapse"
+                    id="navbarNav"
+                >
+                    <div className="navbar-nav ms-auto">
+                        <NavLink
+                            to="/"
+                            className={getNavClass}
+                        >
+                            Home
+                        </NavLink>
 
-                    <NavLink
-                        to="/prodotti"
-                        className={getNavClass}
-                    >
-                        Prodotti
-                    </NavLink>
+                        <NavLink
+                            to="/chi-siamo"
+                            className={getNavClass}
+                        >
+                            Chi Siamo
+                        </NavLink>
+
+                        <NavLink
+                            to="/prodotti"
+                            className={getNavClass}
+                        >
+                            Prodotti
+                        </NavLink>
+
+                        <NavLink
+                            to="/carrello"
+                            className={getNavClass}
+                        >
+                            Carrello
+                        </NavLink>
+                    </div>
                 </div>
             </div>
         </nav>
