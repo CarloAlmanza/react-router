@@ -1,25 +1,36 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function AppNavbar() {
+    const getNavClass = ({ isActive }) =>
+        isActive
+            ? 'nav-link active'
+            : 'nav-link'
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                <Link className="navbar-brand" to="/">
+                <NavLink className="navbar-brand" to="/">
                     FakeStore
-                </Link>
+                </NavLink>
 
                 <div className="navbar-nav">
-                    <Link className="nav-link" to="/">
+                    <NavLink to="/" className={getNavClass}>
                         Home
-                    </Link>
+                    </NavLink>
 
-                    <Link className="nav-link" to="/chi-siamo">
+                    <NavLink
+                        to="/chi-siamo"
+                        className={getNavClass}
+                    >
                         Chi Siamo
-                    </Link>
+                    </NavLink>
 
-                    <Link className="nav-link" to="/prodotti">
+                    <NavLink
+                        to="/prodotti"
+                        className={getNavClass}
+                    >
                         Prodotti
-                    </Link>
+                    </NavLink>
                 </div>
             </div>
         </nav>
