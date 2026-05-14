@@ -6,7 +6,6 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ProductsPage from './pages/ProductsPage'
 import ProductDetailPage from './pages/ProductDetailPage'
-import CartPage from './pages/CartPage'
 
 function App() {
   return (
@@ -27,16 +26,6 @@ function App() {
         <Route
           path="/prodotti/:id"
           element={<ProductDetailPage />}
-        />
-
-        <Route
-          path="/carrello"
-          element={<CartPage />}
-        />
-
-        <Route
-          path="*"
-          element={<h1>404 Not Found</h1>}
         />
       </Route>
     </Routes>

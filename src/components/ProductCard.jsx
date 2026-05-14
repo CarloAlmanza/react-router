@@ -27,18 +27,12 @@ function ProductCard({ product }) {
                         € {product.price}
                     </p>
 
-                    <div className="mt-auto d-flex gap-2">
-                        <Link
-                            to={`/prodotti/${product.id}`}
-                            className="btn btn-outline-dark"
-                        >
-                            Dettagli
-                        </Link>
-
-                        <button className="btn btn-primary">
-                            Acquista
-                        </button>
-                    </div>
+                    <Link
+                        to={`/prodotti/${product.id}`}
+                        className="btn btn-outline-dark mt-auto"
+                    >
+                        Dettagli
+                    </Link>
                 </div>
             </div>
         </div>
